@@ -1,0 +1,15 @@
+{
+  "name": "go-scroll-to",
+  "version": "1.0.0",
+  "description": "Stoppable, speed-driven, touch friendly and small scroll to an element or a position inside the viewport or a parent element.",
+  "main": "goScroll.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pecuchet/go-scroll-to"
+  },
+  "bugs": {
+    "url": "https://github.com/pecuchet/go-scroll-to/issues"
+  },
+  "author": "dotburo (http://dotburo.org)",
+  "license": "Apache-2.0"
+}
