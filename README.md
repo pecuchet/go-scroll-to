@@ -1,12 +1,12 @@
 # goScroll
-A fast and lightweight native javascript module to smoothly scrollTo. It scrolls by speed instead of duration, to a position or an element, within the window or a scrollable parent element. It's stoppable. Aside from a modern browser, it's dependency free.
+A fast and lightweight native javascript module to smoothly scrollTo. It scrolls by speed instead of duration, to a position or an element, within the window or any scrollable parent element. It's stoppable. Aside from a modern browser, it's dependency free.
 
 ### Features
 
 - Scroll the window or any scrollable element
 - Scroll by speed: the duration is relative to the distance
 - Stop when the user manually scrolls (i.e. 'mouse wheels' or 'touch starts')
-- Sets a 'auto-scrolling' class on the body element, so you can disable hovers through CSS while scrolling.
+- Sets an 'auto-scrolling' class on the body element.
 - Scroll to top or a specific position
 - Scroll to an element
 - Offset the target position
