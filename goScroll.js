@@ -65,7 +65,7 @@
             // if the animation is still running,
             // be certain we reached our target position.
             if ( scrolling ) {
-                w.requestAnimationFrame(function() { handleScroll(targetPos); });
+                w.requestAnimationFrame(function() { handleScroll(targetPos - (options.offset || 0)); });
             }
             // callback
             if ( typeof callback === "function" ) {
