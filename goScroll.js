@@ -23,12 +23,12 @@
     }
 
     // find the position on an element
-    function position ( el ) {
+    function position ( el, context ) {
         var top = 0;
         if ( el.offsetParent ) {
             do {
                 top += el.offsetTop;
-            } while ( el = el.offsetParent )
+            } while ( ( el = el.offsetParent ) && ( el.offsetParent != context ) )
         }
         return top;
     }
@@ -40,10 +40,10 @@
         options = options || {};
 
         var context = options.context || w,// default context is the window, else a given element
-            targetPos = options.to && options.to.nodeType === 1 ? position(options.to) : (options.to || 0),
+            targetPos = options.to && options.to.nodeType === 1 ? position(options.to, context) : (options.to || 0),
             startPos = context[ options.context ? 'scrollTop' : 'pageYOffset' ],
             distance = (targetPos - (options.offset || 0)) - startPos,
-            startTime = +new Date(),
+            startTime = Date.now(),
             duration = Math.abs( distance / (options.speed || SPEED) ),
             targetTime = startTime + duration,
             callback = options.callback,
@@ -52,7 +52,7 @@
                 : function ( y ) { context.scrollTo( 0, y ); };
 
         function scroll () {
-            var now = +new Date();
+            var now = Date.now();
 
             // scroll for some time
             if ( scrolling && now <= targetTime ) {
