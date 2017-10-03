@@ -49,7 +49,7 @@ for version 1: ``npm install go-scroll-to@^1.0.3``
 **offset**: Number, offset the target position. Default: 0  
 **context**: HTMLElement. Default: window  
 **speed**: Float greater than 0, higher is faster. Default: 2  
-**callback**: Function, triggered when target is reached or when the user interrupts the animation. The callback receives one argument, which will be `1` if the target position is reached. Default: undefined
+**callback**: Function, triggered when target is reached or when the user interrupts the animation. The callback receives one argument, which will be `1` if the target position was reached. Default: undefined
 
 ## License
 Apache 2.0
