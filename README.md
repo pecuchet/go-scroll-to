@@ -1,19 +1,18 @@
 # goScroll
 A fast and lightweight native javascript module to smoothly scrollTo. It scrolls by speed instead of duration, to a position or an element, within the window or any scrollable parent element. It's stoppable. Aside from a modern browser, it's dependency free.
 
+# goScroll 2 - breaking changes
+goScroll has been updated to JS ES6. If you still need support for older browsers use [version 1.0.3](https://github.com/pecuchet/go-scroll-to/releases/tag/1.0.3) (``npm install go-scroll-to@^1.0.3``)
+
 ### Features
 
 - Scroll the window or any scrollable element
 - Scroll by speed: the duration is relative to the distance
 - Stop when the user manually scrolls (i.e. 'mouse wheels' or 'touch starts')
-- Sets an 'auto-scrolling' class on the body element.
-- Scroll to top or a specific position
-- Scroll to an element
+- Sets an 'auto-scrolling' class name on the body element
+- Scroll to top, to a specific position or to an element
 - Offset the target position
-- Touch, AMD and commonJS compatible
-
-### Support
-- IE9 needs a requestAnimationFrame polyfill
+- Touch compatible
 
 ## Examples
 ### Scroll to top
@@ -29,11 +28,12 @@ goScroll({
     });
 ```
 
-### Scroll slowly to element
+### Scroll slowly to element inside a scrollable element
 ```
 goScroll({
     to: document.getElementById('element'),
-    speed: .3
+    speed: .3,
+    context: document.getElementById('scrollable')
     });
 ```
 
@@ -41,6 +41,7 @@ goScroll({
 ```
 npm install go-scroll-to
 ```
+for version 1: ``npm install go-scroll-to@^1.0.3``
 
 ## All Options
 

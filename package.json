@@ -1,7 +1,7 @@
 {
   "name": "go-scroll-to",
-  "version": "1.0.3",
-  "description": "Super small (< 1kb), super smooth (less reflows, rAF), speed-driven and stoppable scroll to an element or a position inside the viewport or a parent element.",
+  "version": "2.0.0",
+  "description": "Small, smooth, speed-driven and stoppable scrolling to an element or a position, inside the viewport or a parent element.",
   "main": "goScroll.js",
   "repository": {
     "type": "git",
@@ -10,6 +10,6 @@
   "bugs": {
     "url": "https://github.com/pecuchet/go-scroll-to/issues"
   },
-  "author": "dotburo (http://dotburo.org)",
+  "author": "dotburo <hello@dotburo.org> (https://dotburo.org)",
   "license": "Apache-2.0"
 }
