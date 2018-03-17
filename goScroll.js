@@ -36,7 +36,6 @@ function position(el, context, scrollTop) {
     return el.getBoundingClientRect().top + D.documentElement.scrollTop;
 }
 
-
 /**
  * Scroll stop event handler
  * @returns void
@@ -64,14 +63,9 @@ export default function goScroll(options = {}) {
         startTime = Date.now(),
         duration = Math.abs(distance / (options.speed || SPEED)),
         targetTime = startTime + duration,
-        callback = options.callback,
         handleScroll = options.context
-            ? function (y) {
-                context.scrollTop = y;
-            }
-            : function (y) {
-                context.scrollTo(0, y);
-            };
+            ? y => { context.scrollTop = y }
+            : y => { context.scrollTo(0, y) };
 
     scrolling = 1;                                  // wave the flag
     D.body.classList.add(CLASS_NAME);
@@ -97,8 +91,8 @@ export default function goScroll(options = {}) {
             });
         }
 
-        if (typeof callback === "function") {
-            callback.call(context, scrolling);
+        if (typeof options.callback === "function") {
+            options.callback.call(context, scrolling);
         }
 
         context.removeEventListener(STOP_EVENT, listen);
