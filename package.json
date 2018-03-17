@@ -1,6 +1,6 @@
 {
   "name": "go-scroll-to",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Small, smooth, speed-driven and stoppable scrolling to an element or a position, inside the viewport or a parent element.",
   "main": "goScroll.js",
   "repository": {

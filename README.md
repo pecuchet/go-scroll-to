@@ -1,8 +1,8 @@
-# goScroll 2
-A fast and lightweight (1.173kB; 595B gzipped) vanilla javascript module to smoothly scrollTo. It scrolls by speed instead of duration, to a position or an element, within the window or any scrollable parent element. It's stoppable. Aside from a modern browser, it's dependency free.
+# go-scroll-to 2
+A fast and lightweight (±595B gzipped) javascript module to smoothly scrollTo. It scrolls by speed instead of duration, to a position or an element, within the window or any scrollable parent element. And it's stoppable. And aside from a modern browser, it's dependency free.
 
 ## !important
-goScroll 2 has been updated to JS ES6. If you still need support for older browsers use [version 1.0.3](https://github.com/pecuchet/go-scroll-to/releases/tag/1.0.3) (``npm install go-scroll-to@^1.0.3``)
+go-scroll-to has been rewritten to an ES6 module. If you still need support for older browsers use [version 1.0.3](https://github.com/pecuchet/go-scroll-to/releases/tag/1.0.3) (``npm install go-scroll-to@^1.0.3``)
 
 ## Features
 
