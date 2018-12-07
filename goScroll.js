@@ -55,7 +55,7 @@ function listen() {
  * @param {function} options.callback - Do something after the scrolling has/was stopped
  * @returns void
  */
-export default function goScroll(options = {}) {
+export default function (options = {}) {
     let context = options.context || W, // default context is the window, else a given element
         startPos = context[options.context ? 'scrollTop' : 'pageYOffset'],
         targetPos = options.to && options.to.nodeType === 1 ? position(options.to, context, startPos) : (options.to || 0),
